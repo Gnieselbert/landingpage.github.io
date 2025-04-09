@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Operation Netzwerk – Sponsern, Feiern, Austauschen</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
+
+            body {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+                background-image: url("land_back.jpg"); /* Add your image path here */
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+            }
+            .header {
+                text-align: center;
+                padding: 15px 0;
+                background-color: rgba(255, 255, 255, 0.9);
+                border-radius: 10px;
+                margin-bottom: 20px;
+                max-width: 60%; /* Noch schmaler */
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .progress-bar {
+                width: 100%;
+                height: 40px;
+                background-color: #f3f3f3;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+                margin: 20px 0;
+                position: relative;
+            }
+
+            .progress {
+                height: 100%;
+                background-color: #4caf50;
+                border-radius: 10px;
+                transition: width 0.5s ease-in-out;
+                background-image: linear-gradient(
+                    45deg,
+                    rgba(255, 255, 255, 0.15) 25%,
+                    transparent 25%,
+                    transparent 50%,
+                    rgba(255, 255, 255, 0.15) 50%,
+                    rgba(255, 255, 255, 0.15) 75%,
+                    transparent 75%,
+                    transparent
+                );
+                background-size: 40px 40px;
+                animation: progress-bar-stripes 1s linear infinite;
+                position: relative;
+            }
+
+            .progress-text {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                font-weight: bold;
+                z-index: 1; /* Stellt sicher, dass der Text über dem Balken angezeigt wird */
+                text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.7); /* Optional: Textshadow für bessere Lesbarkeit */
+            }
+
+            .progress-percent {
+                font-size: 18px;
+                font-weight: bold;
+                color: #333;
+            }
+
+            .progress-amount {
+                font-size: 14px;
+                color: #333;
+            }
+
+            .sponsors-section {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+                margin: 40px 0;
+                background-color: rgba(255, 255, 255, 0.9);
+                padding: 20px;
+                border-radius: 10px;
+            }
+
+            .sponsor-card {
+                padding: 15px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                text-align: center;
+                background-color: white;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                transition: transform 0.2s ease-in-out;
+            }
+
+            .sponsor-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            }
+
+            .sponsor-card h3 {
+                margin-bottom: 0; /* Entfernt zusätzlichen Abstand, wenn keine Details angezeigt werden */
+                font-size: 16px;
+            }
+
+            .bank-info {
+                background-color: #f9f9f9;
+                padding: 20px;
+                border-radius: 8px;
+                margin: 20px 0;
+            }
+
+            .info-section {
+                margin: 40px 0;
+                line-height: 1.6;
+                text-align: center;
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: rgba(255, 255, 255, 0.9);
+                padding: 20px;
+                border-radius: 10px;
+            }
+
+            @media (max-width: 768px) {
+                body {
+                    padding: 10px;
+                }
+            }
+            @keyframes progress-bar-stripes {
+                from {
+                    background-position: 40px 0;
+                }
+                to {
+                    background-position: 0 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Operation Netzwerk</h1>
+            <h2>Sponsern, Feiern, Austauschen</h2>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress"></div>
+            <div class="progress-text">
+                <div class="progress-percent">0%</div>
+                <div class="progress-amount">0 € von 40.000 €</div>
+            </div>
+        </div>
+
+        <div class="sponsors-section">
+            <!-- Beispielsponsoren -->
+            <div class="sponsor-card">
+                <h3>Dr. Caroline Schmidt</h3>
+            </div>
+            <div class="sponsor-card">
+                <h3>Prof. Michael Becker</h3>
+            </div>
+
+            <div class="sponsor-card">
+                <h3>Dr. Thomas Müller</h3>
+            </div>
+            <div class="sponsor-card">
+                <h3>Dr. Sandra Fischer</h3>
+            </div>
+            <div class="sponsor-card">
+                <h3>Sportklinik Freiburg</h3>
+            </div>
+            <div class="sponsor-card">
+                <h3>Dr. Johannes Weber</h3>
+            </div>
+            <div class="sponsor-card">
+                <h3>Prof. Dr. Erika Neumann</h3>
+            </div>
+            <div class="sponsor-card">
+                <h3>Dr. Robert Krause</h3>
+            </div>
+            <div class="sponsor-card">
+                <h3>Praxis Dr. Hoffmann</h3>
+            </div>
+        </div>
+
+        <div class="bank-info">
+            <h3>Kontoinformationen</h3>
+            <p>IBAN: DE12 3456 7890 1234 5678 90</p>
+            <p>BIC: ABCDEFGHIJK</p>
+            <p>Bank: Beispielbank</p>
+        </div>
+
+        <div class="info-section">
+            <h2>"Karriere macht man nach 21.30 Uhr"</h2>
+            <h3>Werde Teil eines einzigartigen Events,</h3>
+            <p>
+                bei dem langjährige Mitglieder:innen der AGA die jüngeren
+                Semestern nicht nur mit Erfahrung und Weisheit unterstützen,
+                sondern auch mit Cash eine tolle Netzwerkveranstaltung zum
+                Besten geben. Also zeig die Spendierhosen und beteilige dich an
+                diesem einzigartigen Projekt: Eine Spende = Eine Operation, d.h.
+                ihr finanziert die Veranstaltung durch den Ertrag einer
+                jeweiligen Operation. Oder wie viel ihr auch immer sponsern
+                wollt auf das oben genannte Konto. Es werden 300 Gäste erwartet.
+                Hierbei erhalten Sponsor:innen, mit einer Spende ≥ 500 EUR eine
+                direkte Eintrittskarte für das Event. Die restlichen Tickets
+                gehen dann kostenlos an die junge Generation: AGA Residents und
+                junge Fachärzt:innen der AGA. Alles oder nichts Prinzip - Damit
+                die Veranstaltung stattfinden kann, bedarf es 40.000 EUR an
+                Sponsoring. Wenn wir das Ziel nicht erreichen, findet eine
+                Rückerstattung und keine Party statt. Getränke und Snacks sind
+                inklusive und ein DJ sorgt für gute Beats. Wir freuen uns auf
+                zahlreiche Spenden und eine einzigartige Veranstaltung!
+            </p>
+            <h4>Let´s Fetz!</h4>
+        </div>
+
+        <script>
+            // Script für die Aktualisierung der Fortschrittsanzeige
+            const progressBar = document.querySelector(".progress");
+            const progressPercent = document.querySelector(".progress-percent");
+            const progressAmount = document.querySelector(".progress-amount");
+            const targetAmount = 40000; // Zielbetrag in Euro
+            let progress = 0;
+
+            function updateProgress() {
+                if (progress < 100) {
+                    // Fügt 5% hinzu (für die Demo)
+                    progress += 5;
+                    // Berechnet den aktuellen Spendenbetrag basierend auf dem Prozentsatz
+                    const currentAmount = Math.round(
+                        (progress / 100) * targetAmount,
+                    );
+
+                    // Begrenzt den Fortschritt auf maximal 100%
+                    if (progress > 100) progress = 100;
+
+                    // Aktualisiert den Fortschrittsbalken
+                    progressBar.style.width = `${progress}%`;
+
+                    // Aktualisiert die Textanzeigen
+                    progressPercent.textContent = `${progress}%`;
+                    progressAmount.textContent = `${currentAmount.toLocaleString("de-DE")} € von ${targetAmount.toLocaleString("de-DE")} €`;
+
+                    // Ändert die Farbe basierend auf dem Fortschritt
+                    if (progress < 30) {
+                        progressBar.style.backgroundColor = "#ff9800"; // Orange für niedrigen Fortschritt
+                    } else if (progress < 70) {
+                        progressBar.style.backgroundColor = "#2196f3"; // Blau für mittleren Fortschritt
+                    } else {
+                        progressBar.style.backgroundColor = "#4caf50"; // Grün für hohen Fortschritt
+                    }
+                } else {
+                    clearInterval(progressInterval); // Stoppt das Intervall bei 100%
+                }
+            }
+
+            const progressInterval = setInterval(updateProgress, 1000);
+            // Für echte Anwendung: Aktualisierung alle 5 Tage
+            // setInterval(updateProgress, 5 * 24 * 60 * 60 * 1000);
+        </script>
+    </body>
+</html>
